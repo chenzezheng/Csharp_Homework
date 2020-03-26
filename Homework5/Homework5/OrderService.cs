@@ -89,5 +89,16 @@ namespace Homework5
             if (result == null) return null;
             return result.ToList();
         }
+
+        public override string ToString()
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.Append("\n所有订单：\n");
+            foreach (Order order in orders)
+            {
+                builder.Append(order);
+            }
+            return builder.ToString();
+        }
     }
 }
