@@ -10,11 +10,11 @@ namespace Homework6
 {
     public class OrderService
     {
-        public List<Order> orders;
+        public List<Order> orders = new List<Order> { } ;
         
         public OrderService()
         {
-
+            this.orders = new List<Order> { };
         }
         public OrderService(List<Order> orders)
         {

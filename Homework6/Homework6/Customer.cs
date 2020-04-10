@@ -13,8 +13,8 @@ namespace Homework6
 
         public Customer()
         {
-            Name = "null";
-            Address = "null";
+            Name = "";
+            Address = "";
         }
         public Customer(string name, string address)
         {

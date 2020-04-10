@@ -10,6 +10,8 @@ namespace Homework6
     {
         public int ID { get; set; }
         public Customer User { get; set; }
+        public string Name { get { return User.Name; } }
+        public string Address { get { return User.Address; } }
         public DateTime OrderTime { get; set; }
         public List<OrderItem> orderItems;
         public double TotalPrice {
@@ -27,9 +29,9 @@ namespace Homework6
         public Order()
         {
             ID = 0;
-            User = null;
+            User = new Customer("", "");
             OrderTime = DateTime.Now;
-            orderItems = null;
+            orderItems = new List<OrderItem> { };
         }
         public Order (int id, Customer user, DateTime orderTime, List<OrderItem> orderItems)
         {

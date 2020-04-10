@@ -9,12 +9,14 @@ namespace Homework6
     public class OrderItem
     {
         public Commodity Goods { get; set; }
+        public string Name { get { return Goods.Name; } }
+        public double Price { get { return Goods.Price; } }
         public int Quantity { get; set; }
         public double TotalPrice { get { return Goods.Price * Quantity; } }
 
         public OrderItem()
         {
-            Goods = null;
+            Goods = new Commodity("", 0.0);
             Quantity = 0;
         }
         public OrderItem(Commodity goods, int quantity)
